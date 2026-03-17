@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MoMA Gender Vis</title>
+</head>
+<body>
+<h1>Testing GitHub Pages</h1>
+<p>If you can see this, deployment works!</p>
+<div id="status"></div>
+<script>
+    fetch('data/Artists_sample.csv')
+        .then(response => {
+            if (response.ok) {
+                document.getElementById('status').innerHTML =
+                    '✅ Data file accessible!';
+            } else {
+                document.getElementById('status').innerHTML =
+                    '❌ Cannot access data file';
+            }
+        });
+</script>
+</body>
+</html>
